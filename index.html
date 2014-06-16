@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Super Toast Story: Final Scene - CodePen</title>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">var _jf = _jf || [];_jf.push(['p','28377']);_jf.push(['_setFont','wthc06','css','.wthc06']);_jf.push(['_setFont','wthc06','alias','wthc06']);(function(f,q,c,h,e,i,r,d){var k=f._jf;if(k.constructor===Object){return}var l,t=q.getElementsByTagName("html")[0],a=function(u){for(var v in k){if(k[v][0]==u){if(false===k[v][1].call(k)){break}}}},j=/\S+/g,o=/[\t\r\n\f]/g,b=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,g="".trim,s=g&&!g.call("\uFEFF\xA0")?function(u){return u==null?"":g.call(u)}:function(u){return u==null?"":(u+"").replace(b,"")},m=function(y){var w,z,v,u,x=typeof y==="string"&&y;if(x){w=(y||"").match(j)||[];z=t[c]?(" "+t[c]+" ").replace(o," "):" ";if(z){u=0;while((v=w[u++])){if(z.indexOf(" "+v+" ")<0){z+=v+" "}}t[c]=s(z)}}},p=function(y){var w,z,v,u,x=arguments.length===0||typeof y==="string"&&y;if(x){w=(y||"").match(j)||[];z=t[c]?(" "+t[c]+" ").replace(o," "):"";if(z){u=0;while((v=w[u++])){while(z.indexOf(" "+v+" ")>=0){z=z.replace(" "+v+" "," ")}}t[c]=y?s(z):""}}},n;k.push(["_eventActived",function(){p(h);m(e)}]);k.push(["_eventInactived",function(){p(h);m(i)}]);k.addScript=n=function(u,A,w,C,E,B){E=E||function(){};B=B||function(){};var x=q.createElement("script"),z=q.getElementsByTagName("script")[0],v,y=false,D=function(){x.src="";x.onerror=x.onload=x.onreadystatechange=null;x.parentNode.removeChild(x);x=null;a("_eventInactived");B()};if(C){v=setTimeout(function(){D()},C)}x.type=A||"text/javascript";x.async=w;x.onload=x.onreadystatechange=function(G,F){if(!y&&(!x.readyState||/loaded|complete/.test(x.readyState))){y=true;if(C){clearTimeout(v)}x.src="";x.onerror=x.onload=x.onreadystatechange=null;x.parentNode.removeChild(x);x=null;if(!F){setTimeout(function(){E()},200)}}};x.onerror=function(H,G,F){if(C){clearTimeout(v)}D();return true};x.src=u;z.parentNode.insertBefore(x,z)};a("_eventPreload");m(h);n(r,"text/javascript",false,3000)})(this,this.document,"className","jf-loading","jf-active","jf-inactive","//ds.justfont.com/js/stable/v/4.2/id/122846641960");</script>
+        <style>
+            body {
+                margin: 0;
+                background-color: #4b6473;
+                background-image:
+                url(http://codersblock.com/assets/stars1.png),
+                url(http://codersblock.com/assets/stars2.png),
+                url(http://codersblock.com/assets/stars3.png);
+                animation:
+                stars 32s linear infinite,
+                fade 10s steps(5) 16s forwards;
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -200px 0 0 -64px;
+                -webkit-transition: opacity 1s ease-in-out;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                animation: toast 4s ease infinite;
+            }
+            img.show {
+                opacity: 1;
+                filter: alpha(opacity=1);
+            }
+            .dialog {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: 24px 0 0 -300px;
+                width: 552px;
+                padding: 12px;
+                background-color: #fff;
+                border: solid 12px #000;
+                font: bold 22px/36px "wthc06", monospace;
+            }
+            .hidden {
+                visibility: hidden;
+                font: bold 22px/36px "wthc06", monospace;
+            }
+            .dialog div {
+                overflow: hidden;
+                white-space: nowrap;
+                width: 0;
+                animation: dialog 5s steps(24) forwards;
+            }
+            .dialog div:nth-child(1) {
+                animation-delay: 1s;
+            }
+            .dialog div:nth-child(2) {
+                animation-delay: 3s;
+            }
+            .dialog div:nth-child(3) {
+                animation-delay: 6s;
+            }
+
+            @keyframes toast {
+                50% { transform: translateY(20px); }
+                100% { transform: translateY(0px); }
+            }
+            @keyframes dialog {
+                100% { width: 100%; }
+            }
+            @keyframes stars {
+                100% { background-position:
+                    -2048px 512px,
+                    -4096px 512px,
+                -8192px 512px; }
+            }
+            @keyframes fade {
+                100% { background-color: #1d272d; }
+            }
+            #bubbles{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                -webkit-filter: blur(30px);
+                -moz-filter: blur(10px);
+                -o-filter: blur(10px);
+                -ms-filter: blur(10px);
+                filter: blur(10px);
+            }
+        </style>
+        <script src="js/prefixfree.min.js"></script>
+        <script src="js/story.js"></script>
+    </head>
+    <body>
+        <canvas id="bubbles"></canvas>
+        <img src="/pics/15049.png" alt="toast" class="show">
+        <img src="/pics/15074.png" alt="toast">
+        <img src="/pics/15072.png" alt="toast">
+        <img src="/pics/28.png" alt="toast">
+        <img src="/pics/28.png" alt="toast">
+        <div class="dialog", id="0">
+            <div>六月17日是球球和熊熊一週年的日子！.....</div>
+            <div>熊熊希望能夠送給球球一個特殊的禮物...</div>
+            <div>熊熊花了好久的時間，做了這個故事手冊...點擊繼續</div>
+        </div>
+        <div class="hidden", id="2">
+            <div>他們打算看逆光飛翔，可是還早於是.....</div>
+            <div>熊熊帶球球一起去吃必勝客.</div>
+            <div>球球和熊熊聊了很多，而且還喝了不少涼茶...點擊繼續</div>
+        </div>
+        <div class="hidden", id="1">
+            <div>熊熊和球球的第一次約會是在光谷電影院門口.....</div>
+            <div>球球從駕校拍照歸來，熊熊到的比球球早</div>
+            <div>熊熊第一眼看到球球就被深深的吸引了...點擊繼續</div>
+        </div>
+        <div class="hidden", id="3">
+            <div>球球告訴熊熊：碰杯和乾杯是不一樣的！.....</div>
+            <div>乾杯是要喝完的，而碰杯是不需要的</div>
+            <div>所以要說碰杯！...點擊繼續</div>
+        </div>
+        <script src="js/bubble.js"></script>
+    </body>
+</html>
