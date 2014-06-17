@@ -1,4 +1,5 @@
 var    canvas = $('canvas#bubbles')[0];
+var    body = $('body')[0];
 var    context;
 var    colors = new Array('#bf956f', '#bf956f', '#b96b6b', '#6c6164', '#31c3d9', '#f9ca6b');
 var    directions = new Array('up', 'down');

@@ -1,5 +1,4 @@
 var index = 0;
-var dialog_template = "<div>{0}</div> <div>{1}</div> <div>{2}</div>";
 
 String.prototype.format = String.prototype.f = function() {
     var s = this,
@@ -13,6 +12,9 @@ String.prototype.format = String.prototype.f = function() {
 
 $(document).ready(function() {
     $(".dialog").click(function() {
+        if (index > 32) {
+            return
+        }
         $("img").removeClass("show");
         var dialog = $(this);
         var newNode = dialog.clone(true);
