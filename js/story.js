@@ -12,7 +12,7 @@ String.prototype.format = String.prototype.f = function() {
 
 $(document).ready(function() {
     $(".dialog").click(function() {
-        if (index > 32) {
+        if (index > 33) {
             return
         }
         $("img").removeClass("show");
